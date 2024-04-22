@@ -1,0 +1,71 @@
+:root {
+  --clr-darkcyan: hsl(158, 36%, 37%);
+  --clr-cream: hsl(30, 38%, 92%);
+  --clr-darkblue: hsl(212, 21%, 14%);
+  --clr-darkgrayishblue: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-serif: "Fraunces", serif;
+  --ff-sans: "Montserrat", sans-serif;
+
+
+}
+
+html {
+  font-size: 14px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  font-family: var(--ff-sans);
+  background-color: var(--clr-cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+.card {
+  background-color: var(--clr-white);
+  height: 500px;
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem;
+}
+
+@media (min-width: 480px) {
+  .card {
+    flex-direction: row;
+  }
+  .card__img {
+    width: 50%;
+  }
+}
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+/* @media (min-width: 1024px) {} */
+
+/* xl */
+/* @media (min-width: 1280px) {} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
