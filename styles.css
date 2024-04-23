@@ -19,6 +19,7 @@ html {
   box-sizing: border-box;
 }
 * {
+  padding: 0;
   margin: 0;
 }
 
@@ -29,7 +30,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 img, picture, video, canvas, svg {
@@ -38,20 +39,94 @@ img, picture, video, canvas, svg {
 }
 
 .card {
+  overflow: hidden;
   background-color: var(--clr-white);
-  height: 500px;
-  width: 750px;
   display: flex;
   flex-direction: column;
   margin: 2rem 1rem;
+  border-radius: 15px;
 }
+
+.card__img-container {
+
+  max-width: 100%;
+  /* overflow: hidden; */
+}
+
+.card__img-desktop {
+  display: none;
+}
+
+
+.card__text {
+  padding: 1rem 1rem;
+}
+
+.card__title {
+  font-family: var(--ff-serif);
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: .75rem;
+}
+
+.card__subtitle, .card__description, .card__retail-price {
+  color: var(--clr-darkgrayishblue);
+}
+
+.card__subtitle {
+  text-transform: uppercase;
+  letter-spacing: .25rem;
+  margin-bottom: .75rem;
+}
+
+.card__description {
+  margin-bottom: 1rem;
+}
+
+
+.card__prices {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: .75rem;
+}
+
+.card__current-price {
+  font-family: var(--ff-serif);
+  color: var(--clr-darkcyan);
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.card__retail-price {
+  text-decoration: line-through;
+}
+
+.btn {
+  background-color: var(--clr-darkcyan);
+  color: var(--clr-white);
+  font-weight: 500;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  font-family: inherit;
+}
+
+
 
 @media (min-width: 480px) {
   .card {
     flex-direction: row;
   }
-  .card__img {
-    width: 50%;
+ 
+  .card__img-mobile {
+    display: none;
+  }
+
+  .card__img-desktop {
+    display: inline-block;
   }
 }
 
