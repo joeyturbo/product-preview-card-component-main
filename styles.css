@@ -112,11 +112,18 @@ img, picture, video, canvas, svg {
   width: 100%;
   border-radius: 10px;
   font-family: inherit;
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.card__btn-icon {
+  height: 1rem;
 }
 
 
 
-@media (min-width: 480px) {
+@media (min-width: 584px) {
   .card {
     flex-direction: row;
   }
@@ -127,6 +134,8 @@ img, picture, video, canvas, svg {
 
   .card__img-desktop {
     display: inline-block;
+    height: 100%;
+    object-fit: fill;
   }
 }
 
