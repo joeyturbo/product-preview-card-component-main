@@ -119,6 +119,10 @@ img, picture, video, canvas, svg {
   gap: .5rem;
 }
 
+.btn:hover {
+  background-color: hsl(158, 36%, 25%);
+}
+
 .card__btn-icon {
   height: 1rem;
 }
